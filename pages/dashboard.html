@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chính - Hệ thống giám sát chất lượng nước uống</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.ico" />
+    <script type="module" src="../js/dashboard.js"></script>
+</head>
+
+<body>
+    <!-- Thanh Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <div class="navbar-info">
+            <div class="navbar-avatar">
+                <img src="../assets/avatar.png" alt="Avatar" />
+            </div>
+            <span id="logout-button" class="logout-button">Đăng xuất</span>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="dashboard-content">
+            <h1>Chào mừng bạn đến với hệ thống giám sát chất lượng nước uống</h1>
+            <p>Hãy kiểm tra các chỉ số chất lượng nước và nhận cảnh báo khi có sự cố.</p>
+        </div>
+        <span>Thông tin về chỉ số chất lượng nước</span>
+        <div class="infor-container">
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script>
+            <script src="https://cdn.jsdelivr.net/npm/justgage@1.7.0/justgage.min.js"></script>
+            <div>
+                <span>Chỉ số TDS</span>
+                <div id="tds-gauge" class="gauge"></div>
+            </div>
+            <div>
+                <span>Chỉ số nhiệt độ</span>
+                <div id="temperature-gauge" class="gauge"></div>
+            </div>
+        </div>
+        <span>Biểu đồ giám sát</span>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+        <span>Cảnh báo</span>
+        <div class="warning-container">
+            <div class="warning-container" id="warning-container">
+                <!-- Cảnh báo sẽ được hiển thị ở đây -->
+            </div>
+        </div>
+    </div>
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>
